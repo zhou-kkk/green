@@ -437,12 +437,54 @@ cite {
 footer {
     background-color: var(--dark-green);
     color: var(--white);
-    text-align: center;
     padding: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-text {
+    flex: 1;
+    text-align: left;
 }
 
 footer p {
     margin: 0.5rem 0;
+}
+
+.footer-links {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-links a {
+    color: var(--light-green);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.footer-badge {
+    flex-shrink: 0;
+}
+
+.footer-badge img {
+    height: 40px;
+    width: auto;
+    transition: opacity 0.3s ease;
+}
+
+.footer-badge img:hover {
+    opacity: 0.8;
 }
 
 /* Responsive Design */
@@ -485,6 +527,15 @@ footer p {
     .vs {
         transform: rotate(90deg);
     }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-text {
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -501,6 +552,10 @@ footer p {
     .stats h2,
     .action h2 {
         font-size: 1.8rem;
+    }
+
+    .footer-badge img {
+        height: 35px;
     }
 }
 
