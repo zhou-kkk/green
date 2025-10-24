@@ -116,7 +116,7 @@ nav {
 
 .cta-button.secondary {
     background-color: transparent;
-    color: var(--white);
+    color: var(--green);
     border: 2px solid var(--white);
 }
 
@@ -719,6 +719,251 @@ footer p {
     }
 
     .milestone-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Take Action Page Styles */
+.action-category {
+    margin-bottom: 4rem;
+}
+
+.category-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    border-radius: 15px;
+    color: var(--white);
+}
+
+.category-header h2 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.action-detailed-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.action-detailed-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid var(--secondary-green);
+}
+
+.action-detailed-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow);
+}
+
+.action-detailed-card h3 {
+    color: var(--primary-green);
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.action-content {
+    color: var(--text-dark);
+}
+
+.action-intro {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    padding-left: 1rem;
+    border-left: 3px solid var(--light-green);
+}
+
+.action-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.action-list li {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+    position: relative;
+    line-height: 1.7;
+}
+
+.action-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-green);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.action-list strong {
+    color: var(--primary-green);
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+/* Getting Started Section */
+.getting-started {
+    background: linear-gradient(135deg, var(--light-green) 0%, var(--accent) 100%);
+    padding: 3rem;
+    border-radius: 15px;
+    margin-bottom: 4rem;
+}
+
+.getting-started h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--dark-green);
+    margin-bottom: 1.5rem;
+}
+
+.getting-started-text {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.starter-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.step-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-green);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 1rem;
+}
+
+.step-card h3 {
+    color: var(--primary-green);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.step-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Impact Reminder Section */
+.impact-reminder {
+    background-color: var(--background);
+    padding: 3rem;
+    border-radius: 15px;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.impact-reminder h2 {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+}
+
+.impact-reminder>p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.impact-stats-small {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.stat-small {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px var(--shadow);
+    text-align: center;
+}
+
+.stat-small strong {
+    display: block;
+    color: var(--primary-green);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-small span {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Responsive Design for Take Action Page */
+@media (max-width: 768px) {
+    .action-detailed-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-header h2 {
+        font-size: 2rem;
+    }
+
+    .starter-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .action-detailed-card {
+        padding: 1.5rem;
+    }
+
+    .action-list li {
+        padding-left: 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .getting-started {
+        padding: 2rem 1.5rem;
+    }
+
+    .impact-stats-small {
         grid-template-columns: 1fr;
     }
 }
